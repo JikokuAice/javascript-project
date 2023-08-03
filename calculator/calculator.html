@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1>CalcuNinja</h1>
+    <div class="container">
+        <input type="search"    id="display" disabled >
+        <button onclick="appendtodisplay('0')">0</button>
+        <button onclick="appendtodisplay('1')">1</button>
+        <button onclick="appendtodisplay('2')">2</button>
+        <button onclick="appendtodisplay('3')">3</button>
+        <button onclick="appendtodisplay('4')">4</button>
+        <button onclick="appendtodisplay('5')">5</button>
+        <button onclick="appendtodisplay('6')">6</button>
+        <button onclick="appendtodisplay('7')">7</button>
+        <button onclick="appendtodisplay('8')">8</button>
+        <button onclick="appendtodisplay('9')">9</button>
+        <button onclick="operate('+'); appendtodisplay('+')">+</button>
+        <button onclick="operate('-');appendtodisplay('-')">-</button>
+        <button onclick="operate('/');">/</button>
+        <button onclick="operate('*');">*</button>
+        <button onclick="calculate()" id="calculate">=</button>
+        <button onclick="clearall()" id="wipe">C</button>
+    </div>
+    <script src="./scripting.js"></script>
+</body>
+</html>
