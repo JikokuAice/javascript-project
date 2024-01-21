@@ -1,5 +1,5 @@
 let interval;
-let endTime = '2024/1/1'
+let endTime = '2025/1/1'
 
 function operate(ms){
 const day= Math.floor(((ms)/ 86400000));
@@ -19,8 +19,8 @@ return[DAY,HOUR,MIN,SEC];
 
 function display(){
 let currenTime = new Date(); 
-let Year2024 = new Date(endTime);
-let timeLeft = Year2024 - currenTime;
+let Year2025 = new Date(endTime);
+let timeLeft = Year2025 - currenTime;
 
 let[DAY,HOUR,MIN,SEC] = operate(timeLeft);
 document.querySelector('#days').innerText=DAY;

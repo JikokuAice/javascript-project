@@ -1,0 +1,26 @@
+
+
+textarea{
+    height: 300px;
+    font-size: 1.5rem;
+}
+
+h1{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.outline{
+    font-size: 1.6rem;
+    padding: 15px 40px;
+}
+
+.ranges{
+    padding: 20px;
+    width: 300px;
+   
+}
+
+.ranges>p{
+    font-size: 1.2rem;
+}
