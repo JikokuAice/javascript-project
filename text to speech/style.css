@@ -1,8 +1,8 @@
 
 
 textarea{
-    height: 300px;
-    font-size: 1.5rem;
+    height: 250px;
+    font-size: 1.2rem;
 }
 
 h1{
@@ -11,16 +11,24 @@ h1{
 }
 
 .outline{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     padding: 15px 40px;
 }
 
 .ranges{
-    padding: 20px;
-    width: 300px;
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+    width: 600px;
    
 }
 
-.ranges>p{
-    font-size: 1.2rem;
+.ranges>div{
+    height: 50px;
+    font-size: 1rem;
+    
+}
+
+.ranges>div>input[type='range']{
+    width: 200px;
 }
