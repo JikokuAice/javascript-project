@@ -2,19 +2,44 @@ const inventory = [];
 let addbtn = document.querySelector('#add');
 let removebtn = document.querySelector('#remove');
 let updatebtn = document.querySelector('#update');
-
-
+let display = document.querySelector('article');
 
 addbtn.addEventListener('click',(e)=>{
     e.preventDefault();
     adds();
     console.log(inventory);
+    show();
 })
 
 removebtn.addEventListener('click',(e)=>{
     e.preventDefault();
     remove();
+    show();
 })
+
+updatebtn.addEventListener('click',()=>{
+let update = prompt('insert name of product u want to update');
+
+for(let i=0;i<inventory.length;i++ ){
+if(inventory[i].name==update){
+let newName=prompt(`old name is ${inventory[i].name}`);
+let newQuantity=prompt(`old quantity is ${inventory[i].quantity}`)
+let newPrice=prompt(`old price is ${inventory[i].price}`)
+
+console.log(newName,newPrice,newQuantity)
+
+inventory[i].name=newName;
+inventory[i].quantity=newQuantity;
+inventory[i].price=newPrice;
+
+
+}
+show();
+}
+ 
+
+
+});
 
 function adds(){
 let name=prompt('add name of product');
@@ -34,9 +59,9 @@ function remove(){
 
 //for loop inventory[index].name give every product name from inventory
 
-
-/* we also check id any inventory name match product name we 
-inserted in prompt and stored in variable removeName */
+ 
+/* we also check if any inventory name match product name we 
+inserted in prompt and stored in variable removeName  if true then we go inside  if statements*/
 
     if(inventory[i].name === removeName){
 
@@ -48,6 +73,13 @@ inserted in prompt and stored in variable removeName */
 }
 }
 
+
+function show(){
+    for(let i = 0;i < inventory.length;i++){
+display.innerText=`name:${inventory[i].name} ,quantity:${inventory[i].quantity} ,price:${inventory[i].price}`;
+
+    }
+}
 
 
 
